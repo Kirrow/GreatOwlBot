@@ -6,3 +6,4 @@ This bot requires the following permissions (Perms Integer: 92160):
 * Read Message History
 * Send Messages
 * Embed Links
+* Manage Roles
