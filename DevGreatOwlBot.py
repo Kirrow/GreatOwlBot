@@ -130,11 +130,13 @@ async def on_message(message):
             reply = await client.wait_for_message(timeout=30, author=message.author)
             if reply == None:
                 await client.send_message(message.channel, 'Your roles have not been modified, CMDR')
-            elif reply.content == 'y':
+            elif reply.content.lower() == 'y':
                 await client.remove_roles(message.author, role)
                 await client.send_message(message.channel, 'You have been removed from the PC role.')
-            elif reply.content == 'n':
+            elif reply.content.lower() == 'n':
                 await client.send_message(message.channel, 'Your roles have not been modified, CMDR')
+            elif reply.content != None:
+                await client.send_message(message.channel, 'Unrecognized response. Your roles have not been modified, CMDR')
         else:
             msg = 'Adding you to the PC role, CMDR.'
             await client.add_roles(message.author, role)
@@ -149,11 +151,13 @@ async def on_message(message):
             reply = await client.wait_for_message(timeout=30, author=message.author)
             if reply == None:
                 await client.send_message(message.channel, 'Your roles have not been modified, CMDR')
-            elif reply.content == 'y':
+            elif reply.content.lower() == 'y':
                 await client.remove_roles(message.author, role)
                 await client.send_message(message.channel, 'You have been removed from the Xbox 1 role.')
-            elif reply.content == 'n':
+            elif reply.content.lower() == 'n':
                 await client.send_message(message.channel, 'Your roles have not been modified, CMDR')
+            elif reply.content != None:
+                await client.send_message(message.channel, 'Unrecognized response. Your roles have not been modified, CMDR')
         else:
             msg = 'Adding you to the Xbox 1 role, CMDR.'
             await client.add_roles(message.author, role)
@@ -168,11 +172,13 @@ async def on_message(message):
             reply = await client.wait_for_message(timeout=30, author=message.author)
             if reply == None:
                 await client.send_message(message.channel, 'Your roles have not been modified, CMDR')
-            elif reply.content == 'y':
+            elif reply.content.lower() == 'y':
                 await client.remove_roles(message.author, role)
                 await client.send_message(message.channel, 'You have been removed from the PS4 role.')
-            elif reply.content == 'n':
+            elif reply.content.lower() == 'n':
                 await client.send_message(message.channel, 'Your roles have not been modified, CMDR')
+            elif reply.content != None:
+                await client.send_message(message.channel, 'Unrecognized response. Your roles have not been modified, CMDR')
         else:
             msg = 'Adding you to the PS4 role, CMDR.'
             await client.add_roles(message.author, role)
