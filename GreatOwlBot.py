@@ -218,6 +218,185 @@ async def on_member_join(member):
         color=0x00fcff
         )
     await client.send_message(joinchan, embed=em)
+    
+    #Kirrow Edit
+
+        #Vopals response
+        if message.content.startswith('!vopals'):
+            em = discord.Embed(
+                 title='Void Opal Mining',
+                 description='The Tower of Knowledge doesn\'t prohibit the discussion or practice of lucrative deep-core mining. However, it shouldn\'t come off as the absolute one-and-only way of making Credits ingame. We value enjoyment over Credits at any and all costs.'
+                             ' Always let others find what they enjoy the most.',
+                 color=0xff7700,
+            )
+            em.set_image(
+                 url='http://remlok-industries.fr/wp-content/uploads/2017/10/ED-FX17-Mining.jpg'
+            )
+
+            await client.send_message(message.channel, embed=em)
+
+        #Engineering materials
+        if message.content.startswith('!materials'):
+            em = discord.Embed(
+                 title='Engineering Materials Spreadsheet',
+                 url='https://docs.google.com/spreadsheets/d/1Mp7l0bSnMp_G7xWUm75M-XuihDfTdi27rm-vB9K8AX0/edit?usp=sharing',
+                 description='A spreadsheet containing all materials required for engineering and how/where to get them.',
+                 color=0xff7700,
+            )
+            em.set_image(
+                 url='https://yt3.ggpht.com/a-/AAuE7mDaBvvb0xSIVhahkb9hnhQwqOnjmYE50OPxew=s288-mo-c-c0xffffffff-rj-k-no'
+            )
+
+            await client.send_message(message.channel, embed=em)
+
+        #Sidewinder card
+        if message.content.startswith('!sidewinder'):
+            em = discord.Embed(
+                 title='**Ship Overview - Sidewinder Mk. I**',
+                 description="""The beginner\'s ship that\'s not good at anything in particular. 
+                                It requires a **small** pad to land, which means it can land anywhere.
+                                Buying cost: `32 000 Cr`
+                                Hardpoints: `2x Small`
+                                Top Speed: `220 m/s`
+                                Boost Speed: `321 m/s`
+                                Agility: `160`
+                                Cargo Capacity: `4T`
+                                Unladen Jump Range: `7,56 Ly`
+                                ```Its primary use should be for data delivery missions and occasionally combat. Upgrade to higher tier ships is highly recommended.```""",
+                 color=0xff7700,
+            )
+            em.set_image(
+                url='https://imgur.com/JB8bIGL.png'
+            )
+            await client.send_message(message.channel, embed=em)
+
+        #Eagle card
+        if message.content.startswith('!eagle'):
+            em = discord.Embed(
+                 title='**Ship Overview - Eagle Mk. II**',
+                 description="""The cheapest combat focused ship, fast and packing a little bit of a punch. Doesn\'t stay alive for long.
+                                It requires a **small** pad to land, which means it can land anywhere.
+                                Buying cost: `44 800 Cr`
+                                Hardpoints: `3x Small`
+                                Top Speed: `240 m/s`
+                                Boost Speed: `350 m/s`
+                                Agility: `178`
+                                Cargo Capacity: `2T`
+                                Unladen Jump Range: `8,47 Ly`
+                                ```Made for combat, and terrible at everything else. Bounty hunting is an option as well as assassination missions.```""",
+                 color=0xff7700,
+            )
+            em.set_image(
+                url='https://imgur.com/6vIyepf.png'
+            )
+            await client.send_message(message.channel, embed=em)
+
+        #Hauler card
+        if message.content.startswith('!hauler'):
+            em = discord.Embed(
+                 title='**Ship Overview - Hauler**',
+                 description="""The first step for aspiring traders. Surprisingly better at exploring rather than trading.
+                                It requires a **small** pad to land, which means it can land anywhere.
+                                Buying cost: `52 720 Cr`
+                                Hardpoints: `1x Small`
+                                Top Speed: `200 m/s`
+                                Boost Speed: `305 m/s`
+                                Agility: `144`
+                                Cargo Capacity: `8T`
+                                Unladen Jump Range: `9,87 Ly`
+                                ```Decent at trading with the maximum of 22T carried at a time. Combat is not an option, but it can be quite useful for exploration.```""",
+                 color=0xff7700,
+            )
+            em.set_image(
+                url='https://imgur.com/NfNL45G.png'
+            )
+            await client.send_message(message.channel, embed=em)
+
+        #Adder card
+        if message.content.startswith('!adder'):
+            em = discord.Embed(
+                 title='**Ship Overview - Adder**',
+                 description="""The first multipurpose ship and the cheapest option for Multi-Crew.
+                                It requires a **small** pad to land, which means it can land anywhere.
+                                Buying cost: `87 808 Cr`
+                                Hardpoints: `2x Small, 1x Medium`
+                                Top Speed: `220 m/s`
+                                Boost Speed: `320 m/s`
+                                Agility: `144`
+                                Cargo Capacity: `6T`
+                                Unladen Jump Range: `9,12 Ly`
+                                ```A direct upgrade of the Hauler, it does everything better. It can even go into combat and defend itself, as well as being the cheapest viable exploration vessel.```""",
+                 color=0xff7700,
+            )
+            em.set_image(
+                url='https://imgur.com/REfDYLB.png'
+            )
+            await client.send_message(message.channel, embed=em)
+
+        #IEagle card
+        if message.content.startswith('!ieagle'):
+            em = discord.Embed(
+                title='**Ship Overview - Imperial Eagle**',
+                description="""An improved Eagle with better firepower.
+                               It requires a **small** pad to land, which means it can land anywhere.
+                               Buying cost: `110 825 Cr`
+                               Hardpoints: `2x Small, 1x Medium`
+                               Top Speed: `302 m/s`
+                               Boost Speed: `403 m/s`
+                               Agility: `145`
+                               Cargo Capacity: `2T`
+                               Unladen Jump Range: `8,22 Ly`
+                               ```Featuring better firepower and speed than the Eagle, at the cost of a trip to Imperial space and earning a rank. Trading and exploring are not an option.```""",
+                color=0xff7700,
+            )
+            em.set_image(
+                url='https://imgur.com/0ETb9mN.png'
+            )
+            await client.send_message(message.channel, embed=em)
+
+        #Viper3 card
+        if message.content.startswith('!viper3'):
+            em = discord.Embed(
+                title='**Ship Overview - Viper Mk. III**',
+                description="""A combat oriented vessel with small bits of versatility. 
+                               It requires a **small** pad to land, which means it can land anywhere.
+                               Buying cost: `142 931 Cr`
+                               Hardpoints: `2x Small, 2x Medium`
+                               Top Speed: `310 m/s`
+                               Boost Speed: `388 m/s`
+                               Agility: `135`
+                               Cargo Capacity: `4T`
+                               Unladen Jump Range: `6,92 Ly`
+                               ```While not as agile as the Eagles, the Viper Mk. III is tankier and can take on tougher enemies. While non-combat activities aren\'t optimal, they are still a possibility.```""",
+                color=0xff7700,
+            )
+            em.set_image(
+                url='https://imgur.com/0vPA1tS.png'
+            )
+            await client.send_message(message.channel, embed=em)
+
+        #Cobra3 card
+        if message.content.startswith('!cobra3'):
+            em = discord.Embed(
+                title='**Ship Overview - Cobra Mk. III**',
+                description="""A multipurpose ship that won\'t hold you back, also with Multi-Crew.
+                               It requires a **small** pad to land, which means it can land anywhere.
+                               Buying cost: `379 718 Cr`
+                               Hardpoints: `2x Small, 2x Medium`
+                               Top Speed: `282 m/s`
+                               Boost Speed: `402 m/s`
+                               Agility: `140`
+                               Cargo Capacity: `18T`
+                               Unladen Jump Range: `10,46 Ly`
+                               ```The ship is great for combat, trading, exploring, and even mining.```""",
+                color=0xff7700,
+            )
+            em.set_image(
+                url='https://imgur.com/1OODhnZ.png'
+            )
+            await client.send_message(message.channel, embed=em)
+
+#Kirrow Edit end  
 
 @client.event
 async def on_ready():
