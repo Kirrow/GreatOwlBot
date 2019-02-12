@@ -413,7 +413,133 @@ async def on_message(message):
             url='https://imgur.com/1OODhnZ.png'
         )
         await client.send_message(message.channel, embed=em)
+        
+    #Viper4 card
+    if message.content.startswith('!viper4'):
+        em = discord.Embed(
+            title='**Ship Overview - Viper Mk. IV**',
+            description="""Viper III\'s tougher and more versatile brother.
+                           It requires a **small** pad to land, which means it can land anywhere.
+                           Buying cost: `437 930 Cr`
+                           Hardpoints: `2x Small, 2x Medium`
+                           Top Speed: `271 m/s`
+                           Boost Speed: `342 m/s`
+                           Agility: `140`
+                           Cargo Capacity: `18T`
+                           Unladen Jump Range: `10,36 Ly`
+                           ```Decent at everything, but best at combat. It can!t do exploration too well, though.```""",
+            color=0xff7700,
+        )
+        em.set_image(
+            url='https://imgur.com/Cai03ei.png'
+        )        
+        await client.send_message(message.channel, embed=em)
 
+    #DBS card
+    if message.content.startswith('!dbscout'):
+        em = discord.Embed(
+            title='**Ship Overview - Diamondback Scout**',
+            description="""The first ship in the line of explorers.
+                           It requires a **small** pad to land, which means it can land anywhere.
+                           Buying cost: `564 329 Cr`
+                           Hardpoints: `2x Small, 2x Medium`
+                           Top Speed: `283 m/s`
+                           Boost Speed: `384 m/s`
+                           Agility: `150`
+                           Cargo Capacity: `0T`
+                           Unladen Jump Range: `11,35 Ly`
+                           ```Surprisingly good at combat with excellent heat management, but even better as an early exploration ship.```""",
+            color=0xff7700
+         )
+         em.set_image(
+            url='https://imgur.com/xDzltVR.png'
+         )
+         await client.send_message(message.channel, embed=em)
+
+    #Cobra4 card
+    if message.content.startswith('!cobra4'):
+        em = discord.Embed(
+            title='**Ship Overview - Cobra Mk. IV **',
+            description="""A pre-order exclusive multipurpose vessel.
+                           It requires a **small** pad to land, which means it can land anywhere.
+                           Buying cost: `764 720 Cr`
+                           Hardpoints: `3x Small, 2x Medium`
+                           Top Speed: `200 m/s`
+                           Boost Speed: `299 m/s`
+                           Agility: `1525`
+                           Cargo Capacity: `34T`
+                           Unladen Jump Range: `9,37 Ly`
+                           ```Trades mobility for durability when compared to Comba Mk. III, it is better in terms of internals and cargo capacity, but lacks in jump range.```""",
+            color=0xff7700,
+         )
+         em.set_image(
+            url='https://imgur.com/FrJDu7K.png'
+         )
+         await client.send_message(message.channel, embed=em)
+
+    #Type6 card
+    if message.content.startswith('!type6'):
+        em = discord.Embed(
+              title='**Ship Overview - Type-6 Transporter**',
+              description="""The first dedicated freighter-type vessel.
+                             It requires a **medium** pad to land, which means it can land anywhere.
+                             Buying cost: `1 045 945 Cr`
+                             Hardpoints: `2x Small`
+                             Top Speed: `223 m/s`
+                             Boost Speed: `355 m/s`
+                             Agility: `140`
+                             Cargo Capacity: `50T`
+                             Unladen Jump Range: `12,39 Ly`
+                             ```One of the worst ships for combat purposes. On the other hand it excels in trading with the capacity of 112T. Not an ideal explorer, but it works.```""",
+              color=0xff7700,
+        )
+        em.set_image(
+           url='https://imgur.com/lC4epCE.png'
+        )
+        await client.send_message(message.channel, embed=em)
+
+    #Dolphin card
+    if message.content.startswith('!dolphin'):
+        em = discord.Embed(
+              title='**Ship Overview - Dolphin**',
+              description="""An affordable passenger carrier that opens a new set of missions.
+                             It requires a **small** pad to land, which means it can land anywhere.
+                             Buying cost: `1 337 330 Cr`
+                             Hardpoints: `2x Small`
+                             Top Speed: `258 m/s`
+                             Boost Speed: `361 m/s`
+                             Agility: `143`
+                             Cargo Capacity: `14T`
+                             Unladen Jump Range: `10,67 Ly`
+                             ```One of the more cost-effective explorers with good internals and jump range. It can also bring passengers along for long-range trips.```""",
+              color=0xff7700,
+        )
+        em.set_image(
+           url='https://imgur.com/TrxRcg3.png'
+        )
+        await client.send_message(message.channel, embed=em)
+
+    #DBX card
+    if message.content.startswith('!dbexplorer'):
+        em = discord.Embed(
+              title='**Ship Overview - Diamondback Explorer**',
+              description="""An excellent explorer as well as a capable fighter.
+                             It requires a **small** pad to land, which means it can land anywhere.
+                             Buying cost: `1 894 760 Cr`
+                             Hardpoints: `2x Medium, 1x Large`
+                             Top Speed: `242 m/s`
+                             Boost Speed: `316 m/s`
+                             Agility: `131`
+                             Cargo Capacity: `12T`
+                             Unladen Jump Range: `14,15 Ly`
+                             ```This ship boasts one of the highest possible jump-ranges in the game for its cost. It is also fully capable of being a combat ship with its Large hardpoint.```""",
+              color=0xff7700,
+        )
+        em.set_image(
+           url='https://imgur.com/ZqzAQ1s.png'
+        )
+        await client.send_message(message.channel, embed=em)
+    
 #Welcome new users
 @client.event
 async def on_member_join(member):
