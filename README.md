@@ -7,3 +7,5 @@ This bot requires the following permissions:
 * Send Messages
 * Embed Links
 * Manage Roles
+
+The bot also expects a file named "token" to be placed in the same directory as the main script.  The contents of the "token" file are your discord bot's token.

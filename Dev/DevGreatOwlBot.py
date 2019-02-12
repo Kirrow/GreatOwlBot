@@ -4,7 +4,8 @@ import re
 import discord
 import requests
 
-TOKEN = open('token','r')
+tokenfile = open('token','r')
+TOKEN = tokenfile.readline()
 
 client = discord.Client()
 
