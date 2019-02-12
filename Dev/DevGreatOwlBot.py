@@ -31,7 +31,7 @@ async def on_message(message):
                         !edrefcard: EDRefCard website
                         !edsm: Elite Dangerous Star Map website
                         !inara: INARA website\n
-                        Other Commands
+                        Other Commands:
                         !vopals: Our stance on core mining
                         !materials: Spreadsheet for engineering materials and their locations""",
             color=0xff7700
