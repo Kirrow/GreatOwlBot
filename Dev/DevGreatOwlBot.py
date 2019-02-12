@@ -21,14 +21,14 @@ async def on_message(message):
     if message.content.startswith('!help'):
         em = discord.Embed(
             title='Great Owl Help',
-            description="""Help Commands:\n
-                        !help: Displays this help message\n
-                        !rolehelp: Displays role command help\n\n
-                        Website Link Commands:\n
-                        !coriolis: Coriolis website\n
-                        !eddb: Elite Dangerous Database website\n
-                        !edrefcard: EDRefCard website\n
-                        !edsm: Elite Dangerous Star Map website\n
+            description="""Help Commands:
+                        !help: Displays this help message
+                        !rolehelp: Displays role command help\n
+                        Website Link Commands:
+                        !coriolis: Coriolis website
+                        !eddb: Elite Dangerous Database website
+                        !edrefcard: EDRefCard website
+                        !edsm: Elite Dangerous Star Map website
                         !inara: INARA website""",
             color=0x00fcff
         )
@@ -122,9 +122,9 @@ async def on_message(message):
     if message.content.startswith('!rolehelp'):
         em = discord.Embed(
             title='Great Owl Role Help',
-            description="""!pc: Add yourself to the PC role\n
-                        !xb1: Add yourself to the Xbox 1 role\n
-                        !ps4: Add yourself to the PS4 role\n\n
+            description="""!pc: Add yourself to the PC role
+                        !xb1: Add yourself to the Xbox 1 role
+                        !ps4: Add yourself to the PS4 role\n
                         If you run a command while already assigned to its role, you will be asked if you wish to be removed from the role.""",
             color=0x00fcff
         )
