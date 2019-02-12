@@ -23,14 +23,18 @@ async def on_message(message):
             title='Great Owl Help',
             description="""Help Commands:
                         !help: Displays this help message
-                        !rolehelp: Displays role command help\n
+                        !rolehelp: Role command help
+                        !shiphelp: Ship information help\n
                         Website Link Commands:
                         !coriolis: Coriolis website
                         !eddb: Elite Dangerous Database website
                         !edrefcard: EDRefCard website
                         !edsm: Elite Dangerous Star Map website
-                        !inara: INARA website""",
-            color=0x00fcff
+                        !inara: INARA website\n
+                        Other Commands
+                        !vopals: Our stance on core mining
+                        !materials: Spreadsheet for engineering materials and their locations""",
+            color=0xff7700
         )
         em.set_image(
             url='https://i.imgur.com/7yG4taS.jpg'
@@ -43,7 +47,7 @@ async def on_message(message):
             title='Coriolis EDCD Edition',
             url='https://coriolis.io',
             description='A ship builder, outfitting and comparison tool for Elite Dangerous',
-            color=0x00fcff
+            color=0xff7700
         )
         em.add_field(
             name='Note', value='***Please use the s.orbis built-in short link when sharing builds! [Link icon on top right of coriolis page]***'
@@ -59,7 +63,7 @@ async def on_message(message):
             title='The Fuel Rats',
             url='https://fuelrats.com',
             description='The Fuel Rats are Elite: Dangerous\'s premier emergency refueling service. Fueling the galaxy, one ship at a time, since 3301.',
-            color=0x00fcff
+            color=0xff7700
         )
         em.set_image(
             url='https://i.imgur.com/XHCgDTo.png'
@@ -72,7 +76,7 @@ async def on_message(message):
             title='INARA - Elite:Dangerous companion',
             url='https://inara.cz',
             description='The companion site for Elite:Dangerous. Market data, CMDR\'s logs, logbooks, wings, galleries, powerplay, engineers, crafting, galaxy info, news and more...',
-            color=0x00fcff
+            color=0xff7700
         )
         em.set_image(
             url='https://inara.cz/mstile-144x144.png'
@@ -85,7 +89,7 @@ async def on_message(message):
             title='Elite: Dangerous Database - EDDB',
             url='https://eddb.io',
             description='A site about systems, bodies, stations, commodities, materials and trade routes in Elite: Dangerous.',
-            color=0x00fcff
+            color=0xff7700
         )
         em.set_image(
             url='https://eddb.io/mstile-144x144.png'
@@ -98,7 +102,7 @@ async def on_message(message):
             title='EDRefCard',
             url='https://edrefcard.info',
             description='Create and optionally publish a graphical reference card for your Elite: Dangerous keyboard and controller bindings.',
-            color=0x00fcff
+            color=0xff7700
         )
         em.set_image(
             url='https://i.imgur.com/qO578Mn.jpg'
@@ -111,7 +115,7 @@ async def on_message(message):
             title='EDSM - Elite Dangerous Star Map',
             url='https://edsm.net',
             description='The Galactic Positioning System of Elite: Dangerous at your service.',
-            color=0x00fcff
+            color=0xff7700
         )
         em.set_image(
             url='https://www.edsm.net/img/favicons/mstile-144x144.png'
@@ -126,7 +130,7 @@ async def on_message(message):
                         !xb1: Add yourself to the Xbox 1 role
                         !ps4: Add yourself to the PS4 role\n
                         If you run a command while already assigned to its role, you will be asked if you wish to be removed from the role.""",
-            color=0x00fcff
+            color=0xff7700
         )
         em.set_image(
             url='https://i.imgur.com/7yG4taS.jpg'
@@ -242,6 +246,25 @@ async def on_message(message):
              url='https://yt3.ggpht.com/a-/AAuE7mDaBvvb0xSIVhahkb9hnhQwqOnjmYE50OPxew=s288-mo-c-c0xffffffff-rj-k-no'
         )
 
+        await client.send_message(message.channel, embed=em)
+
+    #Ship help response
+    if message.content.startswith('!shiphelp'):
+        em = discord.Embed(
+            title='Great Owl Ship Help',
+            description="""Information pertaining to each ship listed:
+                        !sidewinder: Sidewinder
+                        !eagle: Eagle
+                        !hauler: Hauler
+                        !adder: Adder
+                        !ieagle: Imperial Eagle
+                        !viper3: Viper Mk.III
+                        !cobra3: Cobra Mk.III""",
+            color=0xff7700
+        )
+        em.set_image(
+            url='https://i.imgur.com/7yG4taS.jpg'
+        )
         await client.send_message(message.channel, embed=em)
 
     #Sidewinder card
@@ -404,7 +427,7 @@ async def on_member_join(member):
     em = discord.Embed(
         title='',
         description='Welcome, CMDR {0.mention}.\nIf you have any questions, use one of these Lecture Halls:\n{1}\nIf, however, you want to become a guide, please mention an Overseer or Admin in this channel to start the process. Enjoy your stay and fly safe CMDR, o7'.format(member,chanlist),
-        color=0x00fcff
+        color=0xff7700
     )
     await client.send_message(joinchan, embed=em)
 
