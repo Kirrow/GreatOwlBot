@@ -4,7 +4,8 @@ import re
 import discord
 import requests
 
-TOKEN = ''
+tokenfile = open('token','r')
+TOKEN = tokenfile.readline().rstrip()
 
 client = discord.Client()
 
@@ -17,112 +18,127 @@ async def on_message(message):
         return
 
     #Help response
-    if message.content.startswith('go!help'):
+    if message.content.startswith('!help'):
         em = discord.Embed(
             title='Great Owl Help',
-            description='Help Commands:\ngo!help: Displays this help message\ngo!rolehelp: Displays role command help\n\nWebsite Link Commands:\ngo!coriolis: Coriolis website\ngo!eddb: Elite Dangerous Database website\ngo!edrefcard: EDRefCard website\ngo!edsm: Elite Dangerous Star Map website\ngo!inara: INARA website',
-            color=0x00fcff
-            )
+            description="""Help Commands:
+                        !help: Displays this help message
+                        !rolehelp: Role command help
+                        !shiphelp: Ship information help\n
+                        Website Link Commands:
+                        !coriolis: Coriolis website
+                        !eddb: Elite Dangerous Database website
+                        !edrefcard: EDRefCard website
+                        !edsm: Elite Dangerous Star Map website
+                        !inara: INARA website\n
+                        Other Commands:
+                        !vopals: Our stance on core mining
+                        !materials: Spreadsheet for engineering materials and their locations""",
+            color=0xff7700
+        )
         em.set_image(
             url='https://i.imgur.com/7yG4taS.jpg'
-            )
+        )
         await client.send_message(message.channel, embed=em)
 
     #Coriolis response
-    if message.content.startswith('go!coriolis'):
+    if message.content.startswith('!coriolis'):
         em = discord.Embed(
             title='Coriolis EDCD Edition',
             url='https://coriolis.io',
             description='A ship builder, outfitting and comparison tool for Elite Dangerous',
-            color=0x00fcff
-            )
+            color=0xff7700
+        )
         em.add_field(
             name='Note', value='***Please use the s.orbis built-in short link when sharing builds! [Link icon on top right of coriolis page]***'
-            )
+        )
         em.set_image(
             url='https://coriolis.io/mstile-144x144.png'
-            )
+        )
         await client.send_message(message.channel, embed=em)
 
     #Fuel Rats response
-    if message.content.startswith('go!fuelrats'):
+    if message.content.startswith('!fuelrats'):
         em = discord.Embed(
             title='The Fuel Rats',
             url='https://fuelrats.com',
             description='The Fuel Rats are Elite: Dangerous\'s premier emergency refueling service. Fueling the galaxy, one ship at a time, since 3301.',
-            color=0x00fcff
-            )
+            color=0xff7700
+        )
         em.set_image(
             url='https://i.imgur.com/XHCgDTo.png'
-            )
+        )
         await client.send_message(message.channel, embed=em)
 
     #INARA response
-    if message.content.startswith('go!inara'):
+    if message.content.startswith('!inara'):
         em = discord.Embed(
             title='INARA - Elite:Dangerous companion',
             url='https://inara.cz',
             description='The companion site for Elite:Dangerous. Market data, CMDR\'s logs, logbooks, wings, galleries, powerplay, engineers, crafting, galaxy info, news and more...',
-            color=0x00fcff
-            )
+            color=0xff7700
+        )
         em.set_image(
             url='https://inara.cz/mstile-144x144.png'
-            )
+        )
         await client.send_message(message.channel, embed=em)
 
     #EDDB response
-    if message.content.startswith('go!eddb'):
+    if message.content.startswith('!eddb'):
         em = discord.Embed(
             title='Elite: Dangerous Database - EDDB',
             url='https://eddb.io',
             description='A site about systems, bodies, stations, commodities, materials and trade routes in Elite: Dangerous.',
-            color=0x00fcff
-            )
+            color=0xff7700
+        )
         em.set_image(
             url='https://eddb.io/mstile-144x144.png'
-            )
+        )
         await client.send_message(message.channel, embed=em)
 
     #EDRefCard response
-    if message.content.startswith('go!edrefcard'):
+    if message.content.startswith('!edrefcard'):
         em = discord.Embed(
             title='EDRefCard',
             url='https://edrefcard.info',
             description='Create and optionally publish a graphical reference card for your Elite: Dangerous keyboard and controller bindings.',
-            color=0x00fcff
-            )
+            color=0xff7700
+        )
         em.set_image(
             url='https://i.imgur.com/qO578Mn.jpg'
-            )
+        )
         await client.send_message(message.channel, embed=em)
 
     #EDSM response
-    if message.content.startswith('go!edsm'):
+    if message.content.startswith('!edsm'):
         em = discord.Embed(
             title='EDSM - Elite Dangerous Star Map',
             url='https://edsm.net',
             description='The Galactic Positioning System of Elite: Dangerous at your service.',
-            color=0x00fcff
-            )
+            color=0xff7700
+        )
         em.set_image(
             url='https://www.edsm.net/img/favicons/mstile-144x144.png'
-            ) 
+        ) 
         await client.send_message(message.channel, embed=em)
 
     #Role help response
-    if message.content.startswith('go!rolehelp'):
+    if message.content.startswith('!rolehelp'):
         em = discord.Embed(
             title='Great Owl Role Help',
-            description='go!pc: Add yourself to the PC role\ngo!xb1: Add yourself to the Xbox 1 role\ngo!ps4: Add yourself to the PS4 role\n\nIf you run a command while already assigned to its role, you will be asked if you wish to be removed from the role.',
-            color=0x00fcff
-            )
+            description="""!pc: Add yourself to the PC role
+                        !xb1: Add yourself to the Xbox 1 role
+                        !ps4: Add yourself to the PS4 role\n
+                        If you run a command while already assigned to its role, you will be asked if you wish to be removed from the role.""",
+            color=0xff7700
+        )
         em.set_image(
             url='https://i.imgur.com/7yG4taS.jpg'
-            )
+        )
         await client.send_message(message.channel, embed=em)
 
     #Role Assignment PC
-    if message.content.startswith('go!pc'):
+    if message.content.startswith('!pc'):
         role = discord.utils.get(message.server.roles, name='PC')
         if discord.utils.get(message.author.roles, name='PC'):
             msg = 'You already have the PC role. Would you like to be removed from that role, CMDR?\n(y/n)'
@@ -143,7 +159,7 @@ async def on_message(message):
             await client.send_message(message.channel, msg)
 
     #Role Assignment XB1
-    if message.content.startswith('go!xb1'):
+    if message.content.startswith('!xb1'):
         role = discord.utils.get(message.server.roles, name='XBOX 1')
         if discord.utils.get(message.author.roles, name='XBOX 1'):
             msg = 'You already have the Xbox 1 role. Would you like to be removed from that role, CMDR?\n(y/n)'
@@ -164,7 +180,7 @@ async def on_message(message):
             await client.send_message(message.channel, msg)
 
     #Role Assignment PS4
-    if message.content.startswith('go!ps4'):
+    if message.content.startswith('!ps4'):
         role = discord.utils.get(message.server.roles, name='PS4')
         if discord.utils.get(message.author.roles, name='PS4'):
             msg = 'You already have the PS4 role. Would you like to be removed from that role, CMDR?\n(y/n)'
@@ -191,7 +207,9 @@ async def on_message(message):
         r = requests.post(
             'https://s.orbis.zone/api.php',
             files = {
-                'action': (None, 'shorturl'), 'url': (None, url), 'format': (None, 'json')
+                'action': (None, 'shorturl'),
+                'url': (None, url),
+                'format': (None, 'json')
             },
             headers = {
                 'referer': url,
@@ -228,6 +246,25 @@ async def on_message(message):
              url='https://yt3.ggpht.com/a-/AAuE7mDaBvvb0xSIVhahkb9hnhQwqOnjmYE50OPxew=s288-mo-c-c0xffffffff-rj-k-no'
         )
 
+        await client.send_message(message.channel, embed=em)
+
+    #Ship help response
+    if message.content.startswith('!shiphelp'):
+        em = discord.Embed(
+            title='Great Owl Ship Help',
+            description="""Information pertaining to each ship listed:
+                        !sidewinder: Sidewinder
+                        !eagle: Eagle
+                        !hauler: Hauler
+                        !adder: Adder
+                        !ieagle: Imperial Eagle
+                        !viper3: Viper Mk.III
+                        !cobra3: Cobra Mk.III""",
+            color=0xff7700
+        )
+        em.set_image(
+            url='https://i.imgur.com/7yG4taS.jpg'
+        )
         await client.send_message(message.channel, embed=em)
 
     #Sidewinder card
@@ -390,8 +427,8 @@ async def on_member_join(member):
     em = discord.Embed(
         title='',
         description='Welcome, CMDR {0.mention}.\nIf you have any questions, use one of these Lecture Halls:\n{1}\nIf, however, you want to become a guide, please mention an Overseer or Admin in this channel to start the process. Enjoy your stay and fly safe CMDR, o7'.format(member,chanlist),
-        color=0x00fcff
-        )
+        color=0xff7700
+    )
     await client.send_message(joinchan, embed=em)
 
 @client.event
