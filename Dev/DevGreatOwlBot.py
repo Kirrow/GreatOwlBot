@@ -5,7 +5,7 @@ import discord
 import requests
 
 tokenfile = open('token','r')
-TOKEN = tokenfile.readline()
+TOKEN = tokenfile.readline().rstrip()
 
 client = discord.Client()
 
