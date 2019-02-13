@@ -545,6 +545,111 @@ async def on_message(message):
             url='https://imgur.com/ZqzAQ1s.png'
         )
         await client.send_message(message.channel, embed=em)
+        
+    #ImpCourier card
+    if message.content.startswith('!icourier'):
+        em = discord.Embed(
+              title='**Ship Overview - Imperial Courier**',
+              description="""A great combat ship, often nicknamed a super Eagle.
+                             It requires a **small** pad to land, which means it can land anywhere.
+                             Buying cost: `2 542 931 Cr`
+                             Hardpoints: `3x Medium`
+                             Top Speed: `277 m/s`
+                             Boost Speed: `380 m/s`
+                             Agility: `138`
+                             Cargo Capacity: `12T`
+                             Unladen Jump Range: `7,81 Ly`
+                             ```A strong and agile combat vessel with one of the best cockpits, not great at exploring or trade however.```""",
+              color=0xff7700,
+        )
+        em.set_image(
+            url='https://imgur.com/WLeSfHf.png'
+        )
+        await client.send_message(message.channel, embed=em)
+        
+    #Keelback card
+    if message.content.startswith('!keelback'):
+        em = discord.Embed(
+              title='**Ship Overview - Keelback**',
+              description="""Type-6 modified for combat, it also has a fighter bay.
+                             It requires a **medium** pad to land, which means it can land anywhere.
+                             Buying cost: `3 126 150 Cr`
+                             Hardpoints: `2x Small, 2x Medium`
+                             Top Speed: `202 m/s`
+                             Boost Speed: `303 m/s`
+                             Agility: `135`
+                             Cargo Capacity: `38T`
+                             Unladen Jump Range: `10,94 Ly`
+                             ```It doesn't do trading as well as the Type-6, but it can defend itself very well. The first ideal deep core miner.```""",
+              color=0xff7700,
+        )
+        em.set_image(
+            url='https://imgur.com/8FT9JE1.png'
+        )
+        await client.send_message(message.channel, embed=em)
+        
+    #ASPS card
+    if message.content.startswith('!aspscout'):
+        em = discord.Embed(
+              title='**Ship Overview - Asp Scout**',
+              description="""A cheaper variant of the Asp Explorer, a decent fighter-explorer hybrid.
+                             It requires a **medium** pad to land, which means it can land anywhere.
+                             Buying cost: `3 961 150 Cr`
+                             Hardpoints: `2x Small, 2x Medium`
+                             Top Speed: `223 m/s`
+                             Boost Speed: `304 m/s`
+                             Agility: `160`
+                             Cargo Capacity: `16T`
+                             Unladen Jump Range: `11,69 Ly`
+                             ```It's a decent combat ship and a decent explorer. At the same time, it gets outclassed by the Asp Explorer in everything.```""",
+              color=0xff7700,
+        )
+        em.set_image(
+            url='https://imgur.com/ZwNXiwl.png'
+        )
+        await client.send_message(message.channel, embed=em)
+
+    #Vulture card
+    if message.content.startswith('!vulture'):
+        em = discord.Embed(
+              title='**Ship Overview - Vulture**',
+              description="""A pure combat ship - deadly and nimble.
+                             It requires a **small** pad to land, which means it can land anywhere.
+                             Buying cost: `4 925 615 Cr`
+                             Hardpoints: `2x Large`
+                             Top Speed: `210 m/s`
+                             Boost Speed: `340 m/s`
+                             Agility: `162`
+                             Cargo Capacity: `8T`
+                             Unladen Jump Range: `7,93 Ly`
+                             ```It has great firepower thanks to its Large hardpoints, but its jump range and power plant hold it back.```""",
+              color=0xff7700,
+        )
+        em.set_image(
+            url='https://imgur.com/UKOQ3QA.png'
+        )
+        await client.send_message(message.channel, embed=em)
+        
+    #ASPX card
+    if message.content.startswith('!aspx'):
+        em = discord.Embed(
+              title='**Ship Overview - Asp Explorer**',
+              description="""An explorer's pick - and good for everything else too.
+                             It requires a **medium** pad to land, which means it can land anywhere.
+                             Buying cost: `6 661 153 Cr`
+                             Hardpoints: `4x Small, 2x Medium`
+                             Top Speed: `254 m/s`
+                             Boost Speed: `345 m/s`
+                             Agility: `140`
+                             Cargo Capacity: `38T`
+                             Unladen Jump Range: `13,12 Ly`
+                             ```Exploration is in its name, and it's great. Good at combat as well as mining and trading.```""",
+              color=0xff7700,
+        )
+        em.set_image(
+            url='https://imgur.com/rziK2Hb.png'
+        )
+        await client.send_message(message.channel, embed=em)
     
 #Welcome new users
 @client.event
