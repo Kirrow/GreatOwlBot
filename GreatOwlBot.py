@@ -262,11 +262,11 @@ async def on_message(message):
                         !cobra3: Cobra Mk.III
                         !viper4: Viper Mk.IV
                         !dbscout: Diamondback Scout
-                        !cobra4: Cobra Mk. IV
+                        !cobra4: Cobra Mk.IV
                         !type6: Type-6 Transporter
                         !dolphin: Dolphin
                         !dbexplorer: Diamondback Explorer
-                        !icourier:r Imprerial Courier
+                        !icourier: Imprerial Courier
                         !keelback: Keelback
                         !aspscout: Asp Scout
                         !vulture: Vulture
