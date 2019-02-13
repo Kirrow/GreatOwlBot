@@ -265,7 +265,12 @@ async def on_message(message):
                         !cobra4: Cobra Mk. IV
                         !type6: Type-6 Transporter
                         !dolphin: Dolphin
-                        !dbexplorer: Diamondback Explorer""",
+                        !dbexplorer: Diamondback Explorer
+                        !icourier:r Imprerial Courier
+                        !keelback: Keelback
+                        !aspscout: Asp Scout
+                        !vulture: Vulture
+                        !aspx: Asp Explorer""",
             color=0xff7700
         )
         em.set_image(
