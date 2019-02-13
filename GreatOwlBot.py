@@ -259,7 +259,13 @@ async def on_message(message):
                         !adder: Adder
                         !ieagle: Imperial Eagle
                         !viper3: Viper Mk.III
-                        !cobra3: Cobra Mk.III""",
+                        !cobra3: Cobra Mk.III
+                        !viper4: Viper Mk.IV
+                        !dbscout: Diamondback Scout
+                        !cobra4: Cobra Mk. IV
+                        !type6: Type-6 Transporter
+                        !dolphin: Dolphin
+                        !dbexplorer: Diamondback Explorer""",
             color=0xff7700
         )
         em.set_image(
