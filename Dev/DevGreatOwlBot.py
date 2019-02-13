@@ -456,11 +456,11 @@ async def on_message(message):
                            Unladen Jump Range: `11,35 Ly`
                            ```Surprisingly good at combat with excellent heat management, but even better as an early exploration ship.```""",
             color=0xff7700
-         )
-         em.set_image(
+        )
+        em.set_image(
             url='https://imgur.com/xDzltVR.png'
-         )
-         await client.send_message(message.channel, embed=em)
+        )
+        await client.send_message(message.channel, embed=em)
 
     #Cobra4 card
     if message.content.startswith('!cobra4'):
@@ -477,11 +477,11 @@ async def on_message(message):
                            Unladen Jump Range: `9,37 Ly`
                            ```Trades mobility for durability when compared to Comba Mk. III, it is better in terms of internals and cargo capacity, but lacks in jump range.```""",
             color=0xff7700,
-         )
-         em.set_image(
+        )
+        em.set_image(
             url='https://imgur.com/FrJDu7K.png'
-         )
-         await client.send_message(message.channel, embed=em)
+        )
+        await client.send_message(message.channel, embed=em)
 
     #Type6 card
     if message.content.startswith('!type6'):
@@ -500,7 +500,7 @@ async def on_message(message):
               color=0xff7700,
         )
         em.set_image(
-           url='https://imgur.com/lC4epCE.png'
+            url='https://imgur.com/lC4epCE.png'
         )
         await client.send_message(message.channel, embed=em)
 
@@ -521,7 +521,7 @@ async def on_message(message):
               color=0xff7700,
         )
         em.set_image(
-           url='https://imgur.com/TrxRcg3.png'
+            url='https://imgur.com/TrxRcg3.png'
         )
         await client.send_message(message.channel, embed=em)
 
@@ -542,7 +542,7 @@ async def on_message(message):
               color=0xff7700,
         )
         em.set_image(
-           url='https://imgur.com/ZqzAQ1s.png'
+            url='https://imgur.com/ZqzAQ1s.png'
         )
         await client.send_message(message.channel, embed=em)
     
